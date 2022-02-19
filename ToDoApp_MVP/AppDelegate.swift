@@ -10,10 +10,13 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let view = UIStoryboard(name: "Main", bundle: nil) .instantiateInitialViewController() as! ToDoViewController
+        let model = ToDoModel()
+        let presenter = ToDoPresenter(view: view, model: model)
         return true
     }
 
