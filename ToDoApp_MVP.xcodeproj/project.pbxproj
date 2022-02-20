@@ -14,10 +14,7 @@
 		A1B0D84727C165AF00F3749D /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D84627C165AF00F3749D /* ToDoViewController.swift */; };
 		A1B0D84B27C166AF00F3749D /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D84A27C166AF00F3749D /* ToDoModel.swift */; };
 		A1B0D84E27C166D700F3749D /* ToDoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D84D27C166D700F3749D /* ToDoPresenter.swift */; };
-		A1B0D85027C1F9FA00F3749D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D84F27C1F9FA00F3749D /* TabBarViewController.swift */; };
-		A1B0D85427C2398100F3749D /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D85327C2398100F3749D /* AddTodoViewController.swift */; };
-		A1B0D85627C2490B00F3749D /* AddToDoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D85527C2490B00F3749D /* AddToDoPresenter.swift */; };
-		A1B0D85827C24A4700F3749D /* AddToDomodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D85727C24A4700F3749D /* AddToDomodel.swift */; };
+		A1B0D85A27C276EA00F3749D /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D85927C276EA00F3749D /* AddTodoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +27,7 @@
 		A1B0D84627C165AF00F3749D /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		A1B0D84A27C166AF00F3749D /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
 		A1B0D84D27C166D700F3749D /* ToDoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoPresenter.swift; sourceTree = "<group>"; };
-		A1B0D84F27C1F9FA00F3749D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		A1B0D85327C2398100F3749D /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
-		A1B0D85527C2490B00F3749D /* AddToDoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoPresenter.swift; sourceTree = "<group>"; };
-		A1B0D85727C24A4700F3749D /* AddToDomodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDomodel.swift; sourceTree = "<group>"; };
+		A1B0D85927C276EA00F3749D /* AddTodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +68,6 @@
 				A1B0D83B27C1646400F3749D /* Assets.xcassets */,
 				A1B0D83D27C1646400F3749D /* LaunchScreen.storyboard */,
 				A1B0D84027C1646400F3749D /* Info.plist */,
-				A1B0D84F27C1F9FA00F3749D /* TabBarViewController.swift */,
 			);
 			path = ToDoApp_MVP;
 			sourceTree = "<group>";
@@ -83,7 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				A1B0D84627C165AF00F3749D /* ToDoViewController.swift */,
-				A1B0D85327C2398100F3749D /* AddTodoViewController.swift */,
+				A1B0D85927C276EA00F3749D /* AddTodoViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -91,7 +84,6 @@
 		A1B0D84927C1668F00F3749D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A1B0D85727C24A4700F3749D /* AddToDomodel.swift */,
 				A1B0D84A27C166AF00F3749D /* ToDoModel.swift */,
 			);
 			path = Model;
@@ -101,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				A1B0D84D27C166D700F3749D /* ToDoPresenter.swift */,
-				A1B0D85527C2490B00F3749D /* AddToDoPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -181,10 +172,7 @@
 				A1B0D84E27C166D700F3749D /* ToDoPresenter.swift in Sources */,
 				A1B0D84B27C166AF00F3749D /* ToDoModel.swift in Sources */,
 				A1B0D84727C165AF00F3749D /* ToDoViewController.swift in Sources */,
-				A1B0D85627C2490B00F3749D /* AddToDoPresenter.swift in Sources */,
-				A1B0D85827C24A4700F3749D /* AddToDomodel.swift in Sources */,
-				A1B0D85427C2398100F3749D /* AddTodoViewController.swift in Sources */,
-				A1B0D85027C1F9FA00F3749D /* TabBarViewController.swift in Sources */,
+				A1B0D85A27C276EA00F3749D /* AddTodoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

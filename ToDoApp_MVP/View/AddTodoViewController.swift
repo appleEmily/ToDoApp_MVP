@@ -7,25 +7,33 @@
 
 import UIKit
 
+
+//UIKitが優しいから勝手にインスタンスを生成してくれてる
 class AddTodoViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     
-    private var addPresenter: TodoInput!
+    //presenterを用意
+    private var presenter: ToDoPresenterInput!
     
-    func inject (addPresenter: TodoInput) {
-        self.addPresenter = addPresenter
+    
+    func inject (presenter: ToDoPresenterInput) {
+        self.presenter = presenter
     }
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        //        presenter.addViewload()
     }
+    //追加ボタンを押した時のアクション
     @IBAction func addTodo(_ sender: Any) {
         if !textField.text!.isEmpty {
-            addPresenter.sendTodo(itemContent: textField.text!)
-//            addPresenter.sendTodo(itemContent: addPresenter.newTodo)
+            print(textField.text!)
+            presenter.addNewItem(itemContent: textField.text!)
         }
         dismiss(animated: true, completion: nil)
     }
@@ -36,4 +44,6 @@ extension AddTodoViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
     }
 }
+
+
 

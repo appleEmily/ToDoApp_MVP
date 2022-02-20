@@ -7,16 +7,16 @@
 
 import Foundation
 
-protocol addTodoModelInput {
-    func addTodo(itemContent: String, completion: () -> ())
-}
-
-final class AddToDoModel: addTodoModelInput {
-    
-//    private var addTodoPresenter: AddTodoInput!
-    
-    private let userdefaults: UserDefaults = UserDefaults.standard
-    
-
-    
-}
+//protocol addTodoModelInput {
+//    func addTodo(itemContent: String, completion: () -> ())
+//}
+//
+//final class AddToDoModel: addTodoModelInput {
+//
+////    private var addTodoPresenter: AddTodoInput!
+//
+//    private let userdefaults: UserDefaults = UserDefaults.standard
+//
+//
+//
+//}

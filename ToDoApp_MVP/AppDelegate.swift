@@ -14,10 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        UserDefaults.standard.register(defaults: ["todoItem": ["item1","やほー"]])
+        UserDefaults.standard.register(defaults: ["todoItem": ["item1","やほー","jj","hh"]])
         
         let view = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! ToDoViewController
         let model = ToDoModel()
+        //ここで作ってる。イニシャライズ(インスタンスを生成)
         let presenter = ToDoPresenter(view: view, model: model)
         
         //presenterとviewを紐付ける

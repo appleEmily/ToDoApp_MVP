@@ -16,17 +16,17 @@ import Foundation
 //}
 
 
-final class AddToDoPresenter: AddTodoInput {
-    
-    private(set) var items: [String] = []
-    var newTodo: String = ""
-    private weak var view: ToDoPresenterOutput!
-    private var model: ToDoModelInput!
-    private var addModel: addTodoModelInput!
-    
-    
-    
-    //newTodoをmodelに送る。
+//final class AddToDoPresenter: AddTodoInput {
+//
+//    private(set) var items: [String] = []
+//    var newTodo: String = ""
+//    private weak var view: ToDoPresenterOutput!
+//    private var model: ToDoModelInput!
+//    private var addModel: addTodoModelInput!
+//
+//
+//
+//    //newTodoをmodelに送る。
     //modelの00ってできればいける
 //    func sendTodo() {
 //        print(newTodo)
@@ -41,4 +41,4 @@ final class AddToDoPresenter: AddTodoInput {
 //            view.updateItems()
 //        }
 //    }
-}
+//}

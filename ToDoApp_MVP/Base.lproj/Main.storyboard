@@ -52,7 +52,7 @@
         <!--To Do View Controller-->
         <scene sceneID="NZa-o1-fUL">
             <objects>
-                <viewController id="gHA-JL-cpF" customClass="ToDoViewController" customModule="ToDoApp_MVP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="todoList" id="gHA-JL-cpF" customClass="ToDoViewController" customModule="ToDoApp_MVP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yjf-EJ-Zw6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,7 +78,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="add"/>
                                 <connections>
-                                    <segue destination="3e4-JO-dwF" kind="show" id="Uhn-uB-h9D"/>
+                                    <action selector="add:" destination="gHA-JL-cpF" eventType="touchUpInside" id="F9h-iX-JFi"/>
+                                    <segue destination="3e4-JO-dwF" kind="show" identifier="toAddPage" id="Uhn-uB-h9D"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -9,22 +9,33 @@ import Foundation
 
 protocol ToDoModelInput {
     func fetchItems() -> [String]
-    func addTodo(itemContent: String, completion: () -> ())
+    func addItem(itemContent: String, completion: () -> ())
+    func deleteItemat(index: Int, completion: () -> ())
+//    func addTodo(itemContent: String, completion: () -> ())
 }
 
 final class ToDoModel: ToDoModelInput {
     
     private let userdefaults: UserDefaults = UserDefaults.standard
     
+    private let todoKey: String = "todoItem"
     //保存されているものを表示するためのpresenterに渡すためのメソッド
     func fetchItems() -> [String] {
         return userdefaults.array(forKey: "todoItem") as! [String]
     }
     
-    //userdefaultsに保存する。presenterから送られてきたものを。
-    func addTodo(itemContent: String, completion: () -> ()) {
-        //newTodoにまだ値を入れてないので、エラーが出てる。
-        userdefaults.set(ToDoPresenter.newTodo, forKey: "newTodo")
+    func addItem(itemContent: String, completion: () -> ()) {
+        var items = userdefaults.array(forKey: todoKey) as! [String]
+        items.append(itemContent)
+        userdefaults.set(items, forKey: todoKey)
+        completion()
+    }
+
+    func deleteItemat(index: Int, completion: () -> ()) {
+        var items = userdefaults.array(forKey: todoKey) as! [String]
+        items.remove(at: index)
+        userdefaults.set(items, forKey: todoKey)
+        completion()
     }
     
 }

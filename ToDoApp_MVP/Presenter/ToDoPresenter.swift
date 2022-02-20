@@ -15,11 +15,8 @@ protocol ToDoPresenterInput {
     var numberOfItems: Int {get}
     func item(forRow row: Int) -> String?
     func viewDidLoad()
-    
-    //新しいのを追加する時周り
-    func sendTodo(itemContent: String)
-    //viewでaddを押したときにtextFieldに入っている値をここに入れる。
-    var newTodo: String {set get}
+    func addNewItem(itemContent: String)
+    func deleteCell(at indexPath: IndexPath)
 }
 
 //viewに伝えるメソッドを持っている。
@@ -31,11 +28,14 @@ protocol ToDoPresenterOutput: AnyObject {
 final class ToDoPresenter: ToDoPresenterInput {
     
     private(set) var items: [String] = []
+    //新しいtodoを受け取る。
     var newTodo: String = ""
     
     private weak var view: ToDoPresenterOutput!
+    
     private var model: ToDoModelInput
     
+    //コンストラクター
     init(view: ToDoPresenterOutput, model: ToDoModelInput) {
         self.view = view
         self.model = model
@@ -58,7 +58,6 @@ final class ToDoPresenter: ToDoPresenterInput {
         return items[row]
     }
     
-    
     func viewDidLoad() {
         //modelから保存されているものを受け取る
         //fetchItemsでは[String]で帰ってくる
@@ -71,12 +70,22 @@ final class ToDoPresenter: ToDoPresenterInput {
         
         print("done")
     }
-    
-    func sendTodo(itemContent: String) {
-        model.addTodo(itemContent: itemContent) {
+    func getTodoArray() {
+        items = model.fetchItems()
+        print("modelから", items)
+    }
+    //新しいのを追加する。
+    func addNewItem(itemContent: String) {
+        model.addItem(itemContent: itemContent) {
             items = model.fetchItems()
-            print("最新", items)
-            items.append(itemContent)
+            view.updateItems()
+        }
+    }
+    
+    func deleteCell(at indexPath: IndexPath) {
+        //modelのcellを削除する
+        model.deleteItemat(index: indexPath.row) {
+            items = model.fetchItems()
             view.updateItems()
         }
     }
