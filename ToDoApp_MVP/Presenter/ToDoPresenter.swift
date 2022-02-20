@@ -9,6 +9,7 @@ import Foundation
 
 //presenter
 
+//model,viewから持ってくるための準備
 protocol ToDoPresenterInput {
     //todoitemの数は、modelに保存されている数によるので、get(受け取る)のみで良い
     var numberOfItems: Int {get}
@@ -17,11 +18,13 @@ protocol ToDoPresenterInput {
     
 }
 
+//viewに伝えるメソッドを持っている。
 protocol ToDoPresenterOutput: AnyObject {
     func updateItems()
 }
 
-final class ToDoPresenter: ToDoPresenterInput {
+//final消してみた
+class ToDoPresenter: ToDoPresenterInput {
     
     private(set) var items: [String] = []
     
@@ -38,12 +41,16 @@ final class ToDoPresenter: ToDoPresenterInput {
         return items.count
     }
     
+    //ここが使われていない
+    //ここがいまいち何してるかわからない。
     func item(forRow row: Int) -> String? {
+        //row < items.countが成り立たない時。つまり、items.countがnilの時
         guard row < items.count else {
-            print(items)
+            print("nil")
             return nil
         }
-        print("いけてるよ")
+        print("good", row)
+        
         return items[row]
     }
     
@@ -52,9 +59,12 @@ final class ToDoPresenter: ToDoPresenterInput {
         //modelから保存されているものを受け取る
         //fetchItemsでは[String]で帰ってくる
         items = model.fetchItems()
+        print("modelから", items)
+        
         //viewにtableの更新命令を出す
         //tableの更新に関するコードはviewに書いてある。
         view.updateItems()
+        
         print("done")
     }
     

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A1B0D83327C1646200F3749D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D83227C1646200F3749D /* AppDelegate.swift */; };
-		A1B0D83527C1646200F3749D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D83427C1646200F3749D /* SceneDelegate.swift */; };
 		A1B0D83A27C1646200F3749D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B0D83827C1646200F3749D /* Main.storyboard */; };
 		A1B0D83C27C1646400F3749D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B0D83B27C1646400F3749D /* Assets.xcassets */; };
 		A1B0D83F27C1646400F3749D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B0D83D27C1646400F3749D /* LaunchScreen.storyboard */; };
@@ -16,12 +15,12 @@
 		A1B0D84B27C166AF00F3749D /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D84A27C166AF00F3749D /* ToDoModel.swift */; };
 		A1B0D84E27C166D700F3749D /* ToDoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D84D27C166D700F3749D /* ToDoPresenter.swift */; };
 		A1B0D85027C1F9FA00F3749D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D84F27C1F9FA00F3749D /* TabBarViewController.swift */; };
+		A1B0D85427C2398100F3749D /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D85327C2398100F3749D /* AddTodoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A1B0D82F27C1646200F3749D /* ToDoApp_MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApp_MVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B0D83227C1646200F3749D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A1B0D83427C1646200F3749D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A1B0D83927C1646200F3749D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1B0D83B27C1646400F3749D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1B0D83E27C1646400F3749D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +29,7 @@
 		A1B0D84A27C166AF00F3749D /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
 		A1B0D84D27C166D700F3749D /* ToDoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoPresenter.swift; sourceTree = "<group>"; };
 		A1B0D84F27C1F9FA00F3749D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		A1B0D85327C2398100F3749D /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,6 @@
 				A1B0D84827C1667900F3749D /* View */,
 				A1B0D84C27C166C700F3749D /* Presenter */,
 				A1B0D83227C1646200F3749D /* AppDelegate.swift */,
-				A1B0D83427C1646200F3749D /* SceneDelegate.swift */,
 				A1B0D83827C1646200F3749D /* Main.storyboard */,
 				A1B0D83B27C1646400F3749D /* Assets.xcassets */,
 				A1B0D83D27C1646400F3749D /* LaunchScreen.storyboard */,
@@ -80,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				A1B0D84627C165AF00F3749D /* ToDoViewController.swift */,
+				A1B0D85327C2398100F3749D /* AddTodoViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,8 +175,8 @@
 				A1B0D84E27C166D700F3749D /* ToDoPresenter.swift in Sources */,
 				A1B0D84B27C166AF00F3749D /* ToDoModel.swift in Sources */,
 				A1B0D84727C165AF00F3749D /* ToDoViewController.swift in Sources */,
+				A1B0D85427C2398100F3749D /* AddTodoViewController.swift in Sources */,
 				A1B0D85027C1F9FA00F3749D /* TabBarViewController.swift in Sources */,
-				A1B0D83527C1646200F3749D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +333,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,6 +362,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
