@@ -8,11 +8,32 @@
 import UIKit
 
 class AddTodoViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet weak var textField: UITextField!
+    
+    private var addPresenter: TodoInput!
+    
+    func inject (addPresenter: TodoInput) {
+        self.addPresenter = addPresenter
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
+    @IBAction func addTodo(_ sender: Any) {
+        if !textField.text!.isEmpty {
+            addPresenter.sendTodo(itemContent: textField.text!)
+//            addPresenter.sendTodo(itemContent: addPresenter.newTodo)
+        }
+        dismiss(animated: true, completion: nil)
+    }
 }
+
+extension AddTodoViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+}
+

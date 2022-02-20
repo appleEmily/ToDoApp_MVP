@@ -16,6 +16,10 @@ protocol ToDoPresenterInput {
     func item(forRow row: Int) -> String?
     func viewDidLoad()
     
+    //新しいのを追加する時周り
+    func sendTodo(itemContent: String)
+    //viewでaddを押したときにtextFieldに入っている値をここに入れる。
+    var newTodo: String {set get}
 }
 
 //viewに伝えるメソッドを持っている。
@@ -24,9 +28,10 @@ protocol ToDoPresenterOutput: AnyObject {
 }
 
 //final消してみた
-class ToDoPresenter: ToDoPresenterInput {
+final class ToDoPresenter: ToDoPresenterInput {
     
     private(set) var items: [String] = []
+    var newTodo: String = ""
     
     private weak var view: ToDoPresenterOutput!
     private var model: ToDoModelInput
@@ -41,7 +46,6 @@ class ToDoPresenter: ToDoPresenterInput {
         return items.count
     }
     
-    //ここが使われていない
     //ここがいまいち何してるかわからない。
     func item(forRow row: Int) -> String? {
         //row < items.countが成り立たない時。つまり、items.countがnilの時
@@ -67,5 +71,15 @@ class ToDoPresenter: ToDoPresenterInput {
         
         print("done")
     }
+    
+    func sendTodo(itemContent: String) {
+        model.addTodo(itemContent: itemContent) {
+            items = model.fetchItems()
+            print("最新", items)
+            items.append(itemContent)
+            view.updateItems()
+        }
+    }
+    
     
 }

@@ -12,9 +12,9 @@
         <!--Add Todo View Controller-->
         <scene sceneID="6wB-WX-ci7">
             <objects>
-                <viewController id="3e4-JO-dwF" customClass="AddTodoViewController" customModule="ToDoApp_MVP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="3e4-JO-dwF" customClass="AddTodoViewController" customModule="ToDoApp_MVP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ars-qa-LNg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycl-Nt-bAH">
@@ -26,6 +26,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Add">
                                     <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addTodo:" destination="3e4-JO-dwF" eventType="touchUpInside" id="mCr-Oi-Lbn"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fPF-rF-uTC">
                                 <rect key="frame" x="84" y="240" width="247" height="34"/>
@@ -38,6 +41,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="T3y-cl-3EQ"/>
+                    <connections>
+                        <outlet property="textField" destination="fPF-rF-uTC" id="1ax-HE-0Dn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dkf-Hm-lld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,7 @@ import Foundation
 
 protocol ToDoModelInput {
     func fetchItems() -> [String]
+    func addTodo(itemContent: String, completion: () -> ())
 }
 
 final class ToDoModel: ToDoModelInput {
@@ -19,4 +20,11 @@ final class ToDoModel: ToDoModelInput {
     func fetchItems() -> [String] {
         return userdefaults.array(forKey: "todoItem") as! [String]
     }
+    
+    //userdefaultsに保存する。presenterから送られてきたものを。
+    func addTodo(itemContent: String, completion: () -> ()) {
+        //newTodoにまだ値を入れてないので、エラーが出てる。
+        userdefaults.set(ToDoPresenter.newTodo, forKey: "newTodo")
+    }
+    
 }

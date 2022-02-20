@@ -30,14 +30,10 @@ class ToDoViewController: UIViewController {
          ②受け取る
          ③view(このclass)に命令する
          */
-        print("ぬ")
         presenter.viewDidLoad()
-        print(presenter.item(forRow: 1)!)
-        print("頬")
         
     }
 }
-
 
 
 //このviewからpresenterに送るもの
