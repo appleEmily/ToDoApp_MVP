@@ -15,6 +15,7 @@
 		A1B0D84727C165AF00F3749D /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D84627C165AF00F3749D /* ToDoViewController.swift */; };
 		A1B0D84B27C166AF00F3749D /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D84A27C166AF00F3749D /* ToDoModel.swift */; };
 		A1B0D84E27C166D700F3749D /* ToDoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D84D27C166D700F3749D /* ToDoPresenter.swift */; };
+		A1B0D85027C1F9FA00F3749D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B0D84F27C1F9FA00F3749D /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A1B0D84627C165AF00F3749D /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		A1B0D84A27C166AF00F3749D /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
 		A1B0D84D27C166D700F3749D /* ToDoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoPresenter.swift; sourceTree = "<group>"; };
+		A1B0D84F27C1F9FA00F3749D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				A1B0D83B27C1646400F3749D /* Assets.xcassets */,
 				A1B0D83D27C1646400F3749D /* LaunchScreen.storyboard */,
 				A1B0D84027C1646400F3749D /* Info.plist */,
+				A1B0D84F27C1F9FA00F3749D /* TabBarViewController.swift */,
 			);
 			path = ToDoApp_MVP;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				A1B0D84E27C166D700F3749D /* ToDoPresenter.swift in Sources */,
 				A1B0D84B27C166AF00F3749D /* ToDoModel.swift in Sources */,
 				A1B0D84727C165AF00F3749D /* ToDoViewController.swift in Sources */,
+				A1B0D85027C1F9FA00F3749D /* TabBarViewController.swift in Sources */,
 				A1B0D83527C1646200F3749D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

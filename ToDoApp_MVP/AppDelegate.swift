@@ -14,13 +14,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let view = UIStoryboard(name: "Main", bundle: nil) .instantiateInitialViewController() as! ToDoViewController
+        UserDefaults.standard.register(defaults: ["todoItem": ["item1","やほー"]])
+        
+        let view = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! ToDoViewController
         let model = ToDoModel()
         let presenter = ToDoPresenter(view: view, model: model)
+        
+        //presenterとviewを紐付ける
+        view.inject(presenter: presenter)
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = view
+        window?.makeKeyAndVisible()
         return true
     }
 
-    // MARK: UISceneSession Lifecycle
+    
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
